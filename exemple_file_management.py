@@ -58,6 +58,7 @@ file.write('\nesse texto apare e eh repitido quando "A" é o modo.')
 # quando o modo é "W" (write), deve-se sempre "fechar" o arquivo.
 # regra geral - quando se abre um arquivo para escrita, o sistema bloqueia
 # o acesso a outros usuários para escrita, por isso deve-se fechar o arquivo.
+file.close()
 
 #FECHAR ARQUIVO.
 file.close()  # encerra o objeto file.
@@ -70,6 +71,14 @@ file.close()
 # ler o novo arquivo.
 file = open('new_file.txt', 'r')
 print(file.read())
+file.close()
+
+# whit --> palavra chave do Python.
+with open('teste.txt', 'r') as file:
+    for line in file:
+        print(line)
+# dessa forma, o arquivo é encerrado automaticamante.
+# é melhor usar essa sintaxe, é recomendado.
 
 
 
